@@ -48,7 +48,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/apidojo-io/x-scraper"
   },
   "dependencies": {
     "apify-client": "^2",
