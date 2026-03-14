@@ -1,0 +1,63 @@
+{
+  "name": "@apidojo/x-scraper",
+  "version": "1.0.0",
+  "description": "The fastest and cheapest way to scrape tweets from X (Twitter). Wraps the Apify Twitter Scraper Lite actor with a developer-friendly API.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "bin": {
+    "x-scraper": "src/cli.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "node build.js && tsc",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "twitter",
+    "x",
+    "scraper",
+    "tweets",
+    "apify",
+    "twitter-scraper",
+    "x-scraper",
+    "social-media"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "apify-client": "^2",
+    "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  }
+}
